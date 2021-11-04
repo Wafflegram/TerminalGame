@@ -18,4 +18,18 @@ def sys_start():
     print("CALSIGN OS V3.4")
     print("_____________________________________________")
 
+def sys_lock():
+  print("Incorrect user key")
+  print("System locked for 12 Days")
+  print("Shutting Down System........")
+  print("________________________")
+  sys.exit()
+
 sys_start()
+
+user_key = input("Please enter user key: ")
+
+if user_key == "Telebeetle22":
+    print("Access granted")
+else:
+    sys_lock()
