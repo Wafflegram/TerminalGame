@@ -1,4 +1,5 @@
 import sys
+import time
 
 on_menu = False
 on_vulture = False
@@ -27,6 +28,7 @@ def sys_lock():
   print("System locked for 12 Days")
   print("Shutting Down System........")
   print("________________________")
+  time.sleep(3)
   sys.exit()
 
 sys_start()
@@ -62,6 +64,7 @@ while system_on == True:
                 print("##################################################0x00000012 TRAP_CAUSE_UNKNOWN##################################################")
                 print("_________________________________________________________________________________________________________________________________")
                 print("")
+                time.sleep(3)
                 raise FileCorruption
         elif app_chosen == "Notepad":
             print("Notepad was unable to open. STOP CODE: ERROR_OPEN_FAILED")
