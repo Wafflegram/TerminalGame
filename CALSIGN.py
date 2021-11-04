@@ -4,6 +4,7 @@ on_menu = False
 on_vulture = False
 null_fix = False
 on_null = False
+system_on = True
 
 class FileCorruption(Exception):
     pass
@@ -38,38 +39,45 @@ if user_key == "Telebeetle22":
 else:
     sys_lock()
 
-apps_list = ["Vulture Console", "null", "Unknown", "Notepad"]
+apps_list = ["Vulture Console", "null", "Unknown", "Notepad", "File browser", "System file browser"]
+vulture_objectives = ["Uninstall Unknown app", "Delete pendul.txt"]
 
-while on_menu == True:
-    print("Available Apps: " + str(apps_list))
-    app_chosen = input("Choose an app: ")
+while system_on == True:
 
-    if app_chosen == "Vulture Console":
-        print("Opening VULTURE")
-        print("Welcome to Vulture")
-        on_vulture = True
-        on_menu = False
-    elif app_chosen == "null":
-        if null_fix == True:
+    while on_menu == True:
+        print("Available Apps: " + str(apps_list))
+        app_chosen = input("Choose an app: ")
+
+        if app_chosen == "Vulture Console":
+            print("Opening VULTURE")
+            print("Welcome to Vulture")
+            on_vulture = True
+            on_menu = False
+        elif app_chosen == "null":
+            if null_fix == True:
+                pass
+            else:
+                print("_________________________________________________________SYSTEM SHUTDOWN_________________________________________________________")
+                print("")
+                print("##################################################0x00000012 TRAP_CAUSE_UNKNOWN##################################################")
+                print("_________________________________________________________________________________________________________________________________")
+                print("")
+                raise FileCorruption
+        elif app_chosen == "Notepad":
+            print("Notepad was unable to open. STOP CODE: ERROR_OPEN_FAILED")
+        elif app_chosen == "File browser":
+            pass
+        elif app_chosen == "System file browser":
             pass
         else:
-            print("_________________________________________________________SYSTEM SHUTDOWN_________________________________________________________")
-            print("")
-            print("##################################################0x00000012 TRAP_CAUSE_UNKNOWN##################################################")
-            print("_________________________________________________________________________________________________________________________________")
-            print("")
-            raise FileCorruption
-    elif app_chosen == "Notepad":
-        print("Notepad was unable to open. STOP CODE: ERROR_OPEN_FAILED")
-    else:
-        print("App is either unavailable or you spelled it wrong. Case sensitive")
+            print("App is either unavailable or you spelled it wrong. Case sensitive")
 
-while on_vulture == True:
-    print("VULTURE V2")
-    print("V2 Changes: Terminus AI Added")
-    print("")
-    print("T/ Hi! Im Terminus, the new AI! To know that it is me, T/ will come before my lines to let you know i'm speaking!")
-    print("")
-    print("T/ Objectives: Create new txt file")
+    while on_vulture == True:
+        print("VULTURE V2")
+        print("V2 Changes: Terminus AI Added")
+        print("")
+        print("T/ Hi! Im Terminus, the new AI! To know that it is me, T/ will come before my lines to let you know i'm speaking!")
+        print("")
+        print("T/ Objectives: ")
 
-    console_command = input("CALSIGN/vulture >>> ")
+        console_command = input("CALSIGN/vulture >>> ")
