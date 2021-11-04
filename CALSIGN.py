@@ -46,6 +46,9 @@ while on_menu == True:
 
     if app_chosen == "Vulture Console":
         print("Opening VULTURE")
+        print("Welcome to Vulture")
+        on_vulture = True
+        on_menu = False
     elif app_chosen == "null":
         if null_fix == True:
             pass
@@ -60,3 +63,13 @@ while on_menu == True:
         print("Notepad was unable to open. STOP CODE: ERROR_OPEN_FAILED")
     else:
         print("App is either unavailable or you spelled it wrong. Case sensitive")
+
+while on_vulture == True:
+    print("VULTURE V2")
+    print("V2 Changes: Terminus AI Added")
+    print("")
+    print("T/ Hi! Im Terminus, the new AI! To know that it is me, T/ will come before my lines to let you know i'm speaking!")
+    print("")
+    print("T/ Objectives: Create new txt file")
+
+    console_command = input("CALSIGN/vulture >>> ")
